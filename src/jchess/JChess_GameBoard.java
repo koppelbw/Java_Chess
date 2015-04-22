@@ -1,5 +1,14 @@
 package jchess;
 
+import gamepieces.Bishop;
+import gamepieces.JChess_GamePiece;
+import gamepieces.King;
+import gamepieces.Knight;
+import gamepieces.Pawn;
+import gamepieces.PieceColor;
+import gamepieces.Queen;
+import gamepieces.Rook;
+
 public class JChess_GameBoard {
 
 	private JChess_GamePiece[][] board;
@@ -7,7 +16,6 @@ public class JChess_GameBoard {
 	/* Constructor */
 	public JChess_GameBoard() {
 		setBoard(new JChess_GamePiece[8][8]);
-		initializeBoard();
 		resetBoard();
 	}
 	
@@ -25,29 +33,29 @@ public class JChess_GameBoard {
 		
 		// Allocate and position Black pieces
 		for (int i = 0; i < 8; i++)
-			board[1][i] = new Pawn(Color.BLACK);
+			board[1][i] = new Pawn(PieceColor.BLACK);
 
-		board[0][0] = new Rook(Color.BLACK);
-		board[0][1] = new Knight(Color.BLACK);
-		board[0][2] = new Bishop(Color.BLACK);
-		board[0][3] = new King(Color.BLACK);
-		board[0][4] = new Queen(Color.BLACK);
-		board[0][5] = new Bishop(Color.BLACK);
-		board[0][6] = new Knight(Color.BLACK);
-		board[0][7] = new Rook(Color.BLACK);
+		board[0][0] = new Rook(PieceColor.BLACK);
+		board[0][1] = new Knight(PieceColor.BLACK);
+		board[0][2] = new Bishop(PieceColor.BLACK);
+		board[0][3] = new King(PieceColor.BLACK);
+		board[0][4] = new Queen(PieceColor.BLACK);
+		board[0][5] = new Bishop(PieceColor.BLACK);
+		board[0][6] = new Knight(PieceColor.BLACK);
+		board[0][7] = new Rook(PieceColor.BLACK);
 		
 		// Allocate and position White pieces
 		for (int i = 0; i < 8; i++)
-			board[6][i] = new Pawn(Color.WHITE);
+			board[6][i] = new Pawn(PieceColor.WHITE);
 		
-		board[7][0] = new Rook(Color.WHITE);
-		board[7][1] = new Knight(Color.WHITE);
-		board[7][2] = new Bishop(Color.WHITE);
-		board[7][3] = new King(Color.WHITE);
-		board[7][4] = new Queen(Color.WHITE);
-		board[7][5] = new Bishop(Color.WHITE);
-		board[7][6] = new Knight(Color.WHITE);
-		board[7][7] = new Rook(Color.WHITE);
+		board[7][0] = new Rook(PieceColor.WHITE);
+		board[7][1] = new Knight(PieceColor.WHITE);
+		board[7][2] = new Bishop(PieceColor.WHITE);
+		board[7][3] = new King(PieceColor.WHITE);
+		board[7][4] = new Queen(PieceColor.WHITE);
+		board[7][5] = new Bishop(PieceColor.WHITE);
+		board[7][6] = new Knight(PieceColor.WHITE);
+		board[7][7] = new Rook(PieceColor.WHITE);
 	}
 	
 	public void drawBoardToConsole() {
@@ -71,6 +79,5 @@ public class JChess_GameBoard {
 	public void setBoard(JChess_GamePiece[][] board) {
 		this.board = board;
 	}
-	
 	
 }
