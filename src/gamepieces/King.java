@@ -1,5 +1,14 @@
 package gamepieces;
 
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: King.java
+ * Description: This class is a subclass of the abstract class JChess_GamePiece.
+ * 					This class is required to implement the methods 
+ * 					isLegalPieceMove() and getName().
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public class King extends JChess_GamePiece {
 
 	/* Constructor */
@@ -22,7 +31,5 @@ public class King extends JChess_GamePiece {
 	@Override
 	public Piece getName() {
 		return Piece.KING;
-	}
-
-	
+	}	
 }

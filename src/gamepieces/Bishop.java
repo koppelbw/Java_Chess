@@ -1,5 +1,14 @@
 package gamepieces;
 
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: Bishop.java
+ * Description: This class is a subclass of the abstract class JChess_GamePiece.
+ * 					This class is required to implement the methods 
+ * 					isLegalPieceMove() and getName().
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public class Bishop extends JChess_GamePiece {
 
 	public Bishop(PieceColor color) {
@@ -17,6 +26,4 @@ public class Bishop extends JChess_GamePiece {
 	public Piece getName() {
 		return Piece.BISHOP;
 	}
-	
-
 }

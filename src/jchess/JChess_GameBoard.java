@@ -8,9 +8,17 @@ import gamepieces.Pawn;
 import gamepieces.PieceColor;
 import gamepieces.Queen;
 import gamepieces.Rook;
-
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: JChess_GameBoard.java
+ * Description: This class holds the underlying game board consisting of
+ * 					polymorphic JChess_GamePiece's. 
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public class JChess_GameBoard {
 
+	/* Instantiate the board */
 	private JChess_GamePiece[][] board;
 	
 	/* Constructor */
@@ -58,19 +66,6 @@ public class JChess_GameBoard {
 		board[7][7] = new Rook(PieceColor.WHITE);
 	}
 	
-	public void drawBoardToConsole() {
-		for(int r = 0; r < 8; r++) {
-			for(int c = 0; c < 8; c++) {
-				try{
-				System.out.print("-" + board[r][c].getColor() + "." + board[r][c].getName() + "-");
-				}catch(NullPointerException e) {
-					System.out.print("-**********-");
-				}
-			}
-			System.out.println();
-		}
-	}
-	
 	/* Getter and Setter methods for board */
 	public JChess_GamePiece[][] getBoard() {
 		return board;
@@ -79,5 +74,4 @@ public class JChess_GameBoard {
 	public void setBoard(JChess_GamePiece[][] board) {
 		this.board = board;
 	}
-	
 }

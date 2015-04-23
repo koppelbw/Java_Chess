@@ -1,5 +1,14 @@
 package gamepieces;
 
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: Pawn.java
+ * Description: This class is a subclass of the abstract class JChess_GamePiece.
+ * 					This class is required to implement the methods 
+ * 					isLegalPieceMove() and getName().
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public class Pawn extends JChess_GamePiece {
 
 	public Pawn(PieceColor color) {
@@ -18,9 +27,13 @@ public class Pawn extends JChess_GamePiece {
 			if (source.getColor() == PieceColor.WHITE) {
 				if (sRow - 1 == dRow && sCol == dCol)	// Moving 1 spot forward
 						return true;
+				if(sRow == 6 && dRow == 4 && sCol == dCol)
+					return true;
 			}
 			else {
 				if (sRow + 1 == dRow && sCol == dCol)
+					return true;
+				if(sRow + 2 == dRow && sCol == dCol)
 					return true;
 			}
 		}
@@ -43,6 +56,4 @@ public class Pawn extends JChess_GamePiece {
 	public Piece getName() {
 		return Piece.PAWN;
 	}
-	
-
 }

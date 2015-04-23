@@ -1,5 +1,13 @@
 package gamepieces;
 
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: JChess_GamePiece.java
+ * Description: This class is an abstract parent class for the different
+ *        			types of chess pieces.
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public abstract class JChess_GamePiece {
 
 	/* Instance variable */
@@ -9,7 +17,8 @@ public abstract class JChess_GamePiece {
 	//   In Java, all non-static methods are by default "virtual functions."
 	//   Only methods marked with the keyword final, which cannot be overridden, 
 	//   along with private methods, which are not inherited, are non-virtual.
-	protected abstract boolean isLegalPieceMove(int sRow, int sCol, int dRow, int dCol, JChess_GamePiece[][] gamePieceBoard);
+	protected abstract boolean isLegalPieceMove(int sRow, int sCol, int dRow, 
+			int dCol, JChess_GamePiece[][] gamePieceBoard);
 	
 	// Must be public. protected is not visible to other packages
 	public abstract Piece getName();
@@ -25,7 +34,9 @@ public abstract class JChess_GamePiece {
 	}
 	
 	/* Checks if GamePiece is moving linearly */
-	public boolean isLegalLinearMove(int sRow, int sCol, int dRow, int dCol, JChess_GamePiece[][] gamePieceBoard) {
+	public boolean isLegalLinearMove(int sRow, int sCol, int dRow, 
+			int dCol, JChess_GamePiece[][] gamePieceBoard) {
+		
 		if(sCol == dCol) {
 			if(sRow > dRow) {	// Moving UP
 				// Check if spaces BETWEEN source and destination are empty

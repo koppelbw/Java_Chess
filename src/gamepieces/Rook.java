@@ -1,5 +1,14 @@
 package gamepieces;
 
+/* *****************************************************************************
+ * Project: Java Chess
+ * File: Rook.java
+ * Description: This class is a subclass of the abstract class JChess_GamePiece.
+ * 					This class is required to implement the methods 
+ * 					isLegalPieceMove() and getName().
+ * Author: William Koppelberger
+ * Date: 4/20/15
+ * *****************************************************************************/
 public class Rook extends JChess_GamePiece {
 
 	public Rook(PieceColor color) {
